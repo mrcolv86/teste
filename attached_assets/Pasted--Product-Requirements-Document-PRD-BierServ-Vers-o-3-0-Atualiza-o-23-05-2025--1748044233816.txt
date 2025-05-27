@@ -1,0 +1,91 @@
+# 📘 Product Requirements Document (PRD) — BierServ
+**Versão:** 3.0  
+**Atualização:** 23/05/2025  
+**Idioma Padrão:** Português (Brasil)  
+**Plataforma:** SaaS Web Responsivo
+
+---
+
+## 🎯 Objetivo
+Corrigir falhas visuais, funcionais e de navegação para garantir uma aplicação profissional, fluida e 100% funcional. O sistema deve ser totalmente coeso visualmente, com todos os módulos operando conforme esperado.
+
+---
+
+## 👥 Níveis de Acesso
+- **Administrador:** controle total.
+- **Gerente:** gestão de mesas, produtos e relatórios.
+- **Garçom:** acesso a pedidos e mesas.
+
+---
+
+## 🔧 Correções Críticas a Serem Feitas
+
+### 1. ⚙️ Página `/settings`
+- [ ] Garantir que a rota `/settings` carrega corretamente.
+- [ ] Verificar se está corretamente registrada nas rotas da aplicação.
+
+### 2. 🎨 Padronização de Cards no Dashboard
+- [ ] Os cards "Pedidos Recentes", "Cardápio Digital", "Cervejas", e "QR Codes das Mesas" devem seguir a **mesma paleta de cores e estilo visual** dos cards do menu.
+- [ ] Implementar componente unificado `CardBierServ` reutilizável.
+
+### 3. 🍺 Exibição Correta de ABV/IBU
+- [ ] Substituir `products.abv` por `ABV` e `products.ibu` por `IBU` nas exibições de cervejas.
+- [ ] Ajustar para que esses dados sejam exibidos de forma clara e estilizada.
+
+### 4. 📦 Página `/orders` (Pedidos)
+- [ ] Corrigir bug que impede a página de abrir corretamente.
+- [ ] Exibir lista de pedidos ativos com: mesa, itens, status e valor total.
+
+### 5. 🌗 Botão de Modo Claro/Escuro
+- [ ] Corrigir funcionalidade do botão de alternância de tema.
+- [ ] Garantir que o tema seja persistente entre páginas e recarregamentos.
+- [ ] Aplicar tema corretamente também ao menu de perfil.
+
+### 6. 👤 Menu de Perfil com Tema Incorreto
+- [ ] O menu do usuário aparece com fundo branco mesmo no tema escuro.
+- [ ] Corrigir para que obedeça o tema atual do sistema.
+
+---
+
+## 🧩 Funcionalidades Gerais Mantidas
+- Upload de imagem no cadastro de produtos.
+- Sugestão de harmonização.
+- Avaliações e comentários.
+- Notificações em tempo real com `Socket.IO`.
+- Filtros por estilo/sabor (IBU/ABV).
+- Tradução automática.
+- Controle de mesas com QR Code.
+- Dashboards com relatórios visuais.
+
+---
+
+## ✅ Checklist Final de Qualidade
+- [ ] Página `/settings` funcional
+- [ ] Todos os cards com visual padronizado
+- [ ] Tema claro/escuro funcionando e persistente
+- [ ] Botão de perfil adaptado ao tema
+- [ ] ABV/IBU exibido corretamente
+- [ ] Página `/orders` funcional
+- [ ] Nenhum componente com layout quebrado
+
+---
+
+## 🚀 Prompt para Replit (v3)
+
+```prompt
+Update the BierServ brewery management system with the following improvements:
+
+1. Fix the /settings page route so it renders properly.
+2. Unify all dashboard cards (Recent Orders, Digital Menu, Beers, QR Codes) to use a consistent style and color palette based on the menu page.
+3. Replace 'products.abv' and 'products.ibu' with properly formatted 'ABV' and 'IBU' text in the beer cards.
+4. Fix the /orders page so it loads correctly and displays order details.
+5. Ensure the dark/light mode toggle button works across the entire app and respects current theme settings.
+6. Fix the user profile dropdown menu so it uses the correct theme background (not white in dark mode).
+7. Confirm all new and old features (product uploads, real-time notifications, evaluations, translations, etc.) work seamlessly.
+8. Fully test the platform for responsive layout, consistent design, and error-free interactions.
+
+Deploy this complete version on Replit, fully functional, responsive, and visually cohesive.
+```
+
+---
+

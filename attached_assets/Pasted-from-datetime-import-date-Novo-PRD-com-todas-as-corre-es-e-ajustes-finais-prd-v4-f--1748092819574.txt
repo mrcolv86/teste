@@ -1,0 +1,77 @@
+from datetime import date
+
+# Novo PRD com todas as correções e ajustes finais
+prd_v4 = f"""\
+# 📘 Product Requirements Document (PRD) — BierServ
+**Versão:** 4.0  
+**Atualização:** {date.today().strftime('%d/%m/%Y')}  
+**Idioma Padrão:** Português (Brasil)  
+**Plataforma:** SaaS Web Responsivo
+
+---
+
+## 🎯 Objetivo
+Refinar a aplicação BierServ com foco em coesão visual, estabilidade funcional, usabilidade e integridade de dados. Este PRD cobre correções específicas em design, rotas, e exportação de relatórios.
+
+---
+
+## 👥 Níveis de Acesso
+- **Administrador**
+- **Gerente**
+- **Garçom**
+
+---
+
+## 🧩 Funcionalidades e Correções
+
+### 1. 🧭 Menu Lateral
+- [ ] Corrigir layout e colapso do menu lateral.
+- [ ] Garantir que o menu tenha **estilo consistente** com o tema atual (escuro/claro).
+- [ ] Todos os ícones e labels devem estar visíveis e alinhados corretamente.
+
+### 2. 🍺 Substituições Visuais
+- [ ] Mudar todos os rótulos `products.abv` para **ABV**.
+- [ ] Mudar todos os rótulos `products.ibu` para **IBU**.
+- [ ] Garantir que os valores sejam exibidos com formatação correta (% e IBU).
+
+### 3. 🎨 Correção dos Cards no Dashboard
+- [ ] Os cards **"Pedidos Recentes"**, **"Cardápio Digital"**, **"Cervejas"** e **"QR Codes das Mesas"** estão com fundo branco.
+- [ ] Harmonizar fundo, borda, tipografia e ícones com o **restante dos cards do sistema**.
+- [ ] Usar como padrão visual os cards da página de **Cardápio**.
+
+### 4. 📦 Página `/orders`
+- [ ] Corrigir erro que impede a exibição da página de pedidos.
+- [ ] Listar: número da mesa, itens, valor total, status.
+- [ ] Permitir ações como "Pedido Entregue", "Cancelar", "Finalizar".
+
+### 5. 📑 Relatórios e Exportação
+- [ ] Gerar exportação de relatórios em **formato .PDF**.
+- [ ] Implementar botão “Exportar como PDF” usando biblioteca como `jsPDF` ou `react-pdf`.
+- [ ] Confirmar funcionamento com todos os filtros aplicados.
+
+---
+
+## ✅ Checklist de Verificação
+- [ ] Menu lateral funcionando e coerente com o tema
+- [ ] Página `/orders` acessível e funcional
+- [ ] Cards padronizados e harmonizados no Dashboard
+- [ ] Substituições visuais aplicadas para ABV e IBU
+- [ ] Exportação de relatórios em PDF ativa e funcional
+- [ ] Nenhum erro de layout ou texto truncado
+
+---
+
+## 🚀 Prompt para Replit (v4)
+
+```prompt
+Finalize and polish the BierServ brewery management system with the following tasks:
+
+1. Fix the left sidebar menu to ensure consistent layout, color, and icon alignment. It must respect the light/dark theme.
+2. Replace all instances of 'products.abv' with 'ABV' and 'products.ibu' with 'IBU', using correct formatting.
+3. Fix the background color of dashboard cards: 'Recent Orders', 'Digital Menu', 'Beers', and 'Table QR Codes'. Match their style with the menu page cards.
+4. Ensure the /orders page loads correctly and displays table number, items, total amount, and status. Enable order actions (Deliver, Cancel, Finish).
+5. Enable PDF export for reports using jsPDF or another compatible library.
+6. Review the entire project for layout consistency, label clarity, color harmony, and responsiveness.
+7. Default language is Portuguese (Brazil) and all features must be fully operational on Replit.
+
+Deploy the final system as a complete SaaS platform, fully functional and visually cohesive.

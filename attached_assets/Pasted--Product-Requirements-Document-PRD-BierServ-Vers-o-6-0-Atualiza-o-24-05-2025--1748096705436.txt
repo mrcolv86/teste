@@ -1,0 +1,69 @@
+# 📘 Product Requirements Document (PRD) — BierServ
+**Versão:** 6.0  
+**Atualização:** 24/05/2025  
+**Idioma Padrão:** Português (Brasil)  
+**Plataforma:** SaaS Web Responsivo
+
+---
+
+## 🎯 Objetivo
+Corrigir falhas restantes em botões, interações com formulários, e finalizar a tradução da interface. Garantir total funcionalidade nos módulos de cardápio, mesas e relatórios.
+
+---
+
+## 🧩 Correções Detalhadas
+
+### 1. ➕ Botões Inoperantes
+- [ ] Corrigir botão **"Adicionar novo item"** na página de cardápio.
+- [ ] Corrigir botão **"Adicionar Mesa"** no módulo de gestão de mesas.
+- [ ] Corrigir botão **"Editar Mesa"** nos cards individuais de mesas.
+
+### 2. 📅 Filtro de Datas em Relatórios
+- [ ] Traduzir o componente de seleção de datas para o idioma **Português**.
+- [ ] Garantir formatação de datas `DD/MM/YYYY`.
+
+### 3. 📊 Correções de Tradução na Página `/reports`
+- [ ] Substituir `Sales Overview` por **Visão geral de vendas**
+- [ ] Substituir `reports.salesDescription` por **Descrição/Relatório de Vendas**
+- [ ] Substituir `reports.sales` (no gráfico) por **Relatórios de Vendas**
+- [ ] Corrigir funcionalidade do botão **"Vendas por categorias"** (renderizar o gráfico corretamente)
+
+### 4. 👤 Correção do Menu de Perfil
+- [ ] Substituir `settings.userPreferences` por **Preferências de Usuário**
+- [ ] Garantir que o menu de perfil siga o tema atual (claro ou escuro)
+
+---
+
+## ✅ Checklist Final
+- [ ] Botão de adicionar novo item no menu funcional
+- [ ] Botão de adicionar mesa funcional
+- [ ] Botão de editar mesa funcional
+- [ ] Filtro de datas traduzido e formatado
+- [ ] Gráfico de vendas por categoria funcionando
+- [ ] Traduções da visão geral e gráficos finalizadas
+- [ ] Menu de perfil coerente com o tema e traduzido
+
+---
+
+## 🚀 Prompt para Replit (v6)
+
+```prompt
+Fix the following issues in the BierServ brewery management system:
+
+1. Ensure the 'Add New Item' button on the menu page works and opens the product form.
+2. Fix the 'Add Table' button so it opens the table creation modal/form correctly.
+3. Ensure the 'Edit Table' button on each table card is functional and opens the edit form.
+4. Translate the date filter in the /reports page to Portuguese and use DD/MM/YYYY format.
+5. Update report interface labels:
+   - 'Sales Overview' → 'Visão geral de vendas'
+   - 'reports.salesDescription' → 'Descrição/Relatório de Vendas'
+   - Chart label 'reports.sales' → 'Relatórios de Vendas'
+6. Make the 'Vendas por categorias' button functional and render the correct chart.
+7. Change 'settings.userPreferences' in the user profile menu to 'Preferências de Usuário'.
+8. Ensure all components respect the current theme and no untranslated strings remain.
+
+Test thoroughly and deploy on Replit as a stable and fully functional version.
+```
+
+---
+

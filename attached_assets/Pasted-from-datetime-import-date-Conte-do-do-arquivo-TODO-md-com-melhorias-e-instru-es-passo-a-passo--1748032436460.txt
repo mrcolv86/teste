@@ -1,0 +1,78 @@
+from datetime import date
+
+# Conteúdo do arquivo TODO.md com melhorias e instruções passo a passo
+todo_markdown = f"""\
+# ✅ TODO: Melhorias do Sistema BierServ
+**Atualização:** {date.today().strftime('%d/%m/%Y')}  
+**Objetivo:** Corrigir inconsistências visuais, implementar funcionalidades pendentes e padronizar a experiência do usuário no sistema de gerenciamento de cervejaria BierServ.
+
+---
+
+## 🧩 Funcionalidades a Implementar
+
+### 1. 🌐 Internacionalização (i18n)
+- [ ] Instalar `i18next` e `react-i18next`.
+- [ ] Criar arquivos de tradução (`pt`, `en`, `es`) com fallback para `pt-BR`.
+- [ ] Substituir textos fixos por `t("chave")`.
+- [ ] Detectar idioma do navegador e aplicar automaticamente.
+
+### 2. 🍻 Harmonização de Cervejas
+- [ ] Adicionar campo "Sugestão de harmonização" no cadastro de cervejas.
+- [ ] Exibir sugestões nos cards/detalhes das cervejas no cardápio.
+
+### 3. ⭐ Avaliação de Produtos
+- [ ] Criar componente de avaliação por estrelas + campo de comentário.
+- [ ] Exibir avaliações na visualização pública do produto.
+- [ ] Adicionar painel de moderação (aprovado/rejeitado) no admin.
+
+### 4. 📱 Pedido Direto pelo Celular
+- [ ] Permitir que o cliente monte pedido no cardápio digital via QR.
+- [ ] Criar botão "Confirmar Pedido" com integração ao painel do garçom/admin.
+- [ ] Exibir notificação de novo pedido em tempo real.
+
+### 5. 🔔 Notificações em Tempo Real
+- [ ] Verificar se `Socket.IO` está ativo.
+- [ ] Criar eventos para:
+    - novo pedido
+    - pedido pronto
+    - chamado de garçom
+    - status da mesa alterado
+- [ ] Exibir alertas com toasts ou banners animados.
+
+### 6. 📊 Dashboards Avançados
+- [ ] Implementar gráficos com `Chart.js` ou `Recharts`.
+- [ ] Dados por período, por mesa, por produto.
+- [ ] Exportação para CSV/PDF.
+
+---
+
+## 🎨 Melhorias Visuais e UI/UX
+
+### 1. 📦 Textos Fora de Cards
+- [ ] Adicionar `overflow-wrap: break-word` e `max-width` nos containers de texto.
+- [ ] Usar `line-clamp` ou `ellipsis` para textos muito longos.
+
+### 2. 🎨 Padronização dos Cards
+- [ ] Adotar o mesmo estilo de card da **página do cardápio** como base.
+- [ ] Aplicar essa paleta e estilo nos cards do Dashboard, Pedidos e Mesas.
+- [ ] Criar um componente reutilizável `CardBierServ` para evitar inconsistência.
+
+---
+
+## 🚀 Prompt Atualizado para Replit
+
+```prompt
+Update the brewery management system to include the following improvements:
+
+1. Implement product pairing suggestions for each beer.
+2. Add automatic language translation support (Portuguese, English, Spanish) using i18next.
+3. Create a product rating and review system with moderation in the admin panel.
+4. Enable real-time ordering directly from the customer's phone via QR code.
+5. Display real-time notifications using Socket.IO for orders and waiter calls.
+6. Build detailed analytics dashboards with graphs and data export options.
+7. Fix text overflow issues in all cards and containers (use word wrap and truncation).
+8. Standardize the visual style of cards across the platform based on the menu page design.
+9. Default language must be Portuguese (Brazil).
+10. Use consistent dark/light theme and typography for all views.
+
+Ensure everything is fully functional and responsive. All components must follow the same visual pattern. Replit compatibility required.

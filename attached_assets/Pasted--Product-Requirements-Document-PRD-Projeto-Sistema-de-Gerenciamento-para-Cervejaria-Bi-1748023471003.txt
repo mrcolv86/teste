@@ -1,0 +1,126 @@
+# 📘 Product Requirements Document (PRD)
+**Projeto:** Sistema de Gerenciamento para Cervejaria  (BierServ)
+**Versão:** 1.0  
+**Data:** 23/05/2025  
+**Idioma:** Português Brasileiro  
+**Plataforma:** Web-based (SaaS, responsivo)
+
+---
+
+## 🎯 Visão Geral
+Este sistema tem como objetivo fornecer um ambiente completo para o gerenciamento de cervejarias artesanais e brewpubs, com foco em digitalização da experiência do cliente, eficiência operacional e ferramentas de inteligência de negócio.
+
+---
+
+## 🔐 Níveis de Acesso
+- **Administrador**: acesso total ao sistema.
+- **Gerente**: gerenciamento de cardápio, categorias, mesas e relatórios.
+- **Garçom**: acesso limitado aos pedidos em aberto e status das mesas.
+
+---
+
+## 🧩 Funcionalidades Principais
+
+### 1. 📱 Cardápio Digital
+- Visualização de cervejas, petiscos e pratos.
+- Exibição de IBU e ABV na descrição das cervejas.
+- Filtro por estilo, tipo, IBU e teor alcoólico.
+- Sugestões de harmonização de cada cerveja com pratos.
+
+### 2. 🔗 Acesso via QR Code
+- QR Code único por mesa.
+- Identificação automática da mesa ao escanear.
+
+### 3. 🧾 Gestão de Categorias
+- Criação e edição de categorias de produtos com ícones ou imagens.
+
+### 4. 🎨 Personalização Visual
+- Logo, cores e nome configuráveis.
+- Modo claro/escuro.
+
+### 5. 🍽️ Pedido Direto pelo Celular
+- Cliente monta pedido e envia pelo celular.
+- Pedido aparece no painel do garçom/admin em tempo real.
+
+### 6. 🔔 Notificações em Tempo Real
+- Alertas visuais e sonoros para pedidos e promoções.
+
+### 7. ⭐ Avaliação de Produtos
+- Clientes podem avaliar e comentar produtos.
+- Moderação via painel administrativo.
+
+### 8. 🌍 Tradução Automática
+- Cardápio adaptável para português, inglês ou espanhol.
+
+### 9. 📊 Relatórios e Dashboards
+- Vendas por hora, produto, estilo, mesa.
+- Produtos mais vendidos, avaliações médias.
+- Exportação de relatórios.
+
+### 10. 🪑 Controle de Mesas
+- Status da mesa (Livre, Ocupada, Aguardando).
+- Sistema de reservas e histórico de pedidos.
+
+### 11. 🧑‍💻 Controle de Acesso e Logs
+- Registros de login, alterações e ações de cada usuário.
+
+---
+
+## ⚙️ Tecnologias Sugeridas
+- **Frontend:** React.js com TailwindCSS
+- **Backend:** Node.js com Express
+- **Banco de Dados:** MongoDB ou PostgreSQL
+- **Real-time:** Socket.IO
+- **Internacionalização:** i18next
+- **Hospedagem:** Replit + Render/Fly.io para escalabilidade
+
+---
+
+## 🚀 Prompt para Replit (em inglês)
+
+```prompt
+Create a full-featured SaaS brewery management system with the following modules:
+
+- Digital menu accessible by QR Code, showing IBU/ABV and product images
+- Table identification via unique QR Code
+- Product categories management (beers, snacks, meals)
+- Customization with brand colors, logo and brewery name
+- Real-time ordering by customers through their phones
+- Notifications (orders, waiter requests, promotions)
+- Product reviews and ratings (with moderation)
+- Style/sensation-based filtering (by bitterness, ABV, beer type)
+- Food pairing suggestions per beer
+- Automatic language translation (PT/EN/ES)
+- User role system (admin, manager, waiter)
+- Detailed dashboards and sales reports
+- Table status control and reservation system
+- Access control and action logging
+
+Use:
+- React + TailwindCSS for frontend
+- Node.js + Express for backend
+- MongoDB for database
+- Socket.IO for real-time features
+- Deployable on Replit
+- Language: Portuguese (Brazil) as default
+- Admin login: admin@admin.com / senha: admin123
+
+Ensure all features are working, fully styled, and production-ready. Include all necessary routes, authentication, database models, and components. Everything must be fully functional on Replit.
+```
+
+---
+
+## ✅ Checklist Final
+- [x] Cardápio com IBU/ABV e harmonização
+- [x] Filtro por estilo e sabor
+- [x] QR code funcional por mesa
+- [x] Pedido direto e notificações em tempo real
+- [x] Tradução automática
+- [x] Avaliações com moderação
+- [x] Dashboards e relatórios
+- [x] Personalização visual
+- [x] Controle de acesso e logs
+- [x] Multiusuário com níveis de permissão
+- [x] Totalmente funcional em Replit
+
+---

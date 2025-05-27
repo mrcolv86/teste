@@ -1,0 +1,88 @@
+# 📘 Product Requirements Document (PRD) — BierServ
+**Versão:** 5.0  
+**Atualização:** 24/05/2025  
+**Idioma Padrão:** Português (Brasil)  
+**Plataforma:** SaaS Web Responsivo
+
+---
+
+## 🎯 Objetivo
+Corrigir botões inoperantes, rótulos incorretos e falhas de tradução mantendo o design atual. Finalizar a funcionalidade de exportação do cardápio em PDF com branding e otimizar a interface de relatórios e gestão.
+
+---
+
+## 🧩 Funcionalidades e Correções Detalhadas
+
+### 1. 🖨️ Exportação do Cardápio em PDF
+- [ ] Corrigir botões **"Exportar Cardápio PDF"** e **"PDF Compacto"** para que gerem corretamente o arquivo em .PDF.
+- [ ] Incluir logotipo no topo do PDF exportado.
+- [ ] PDF deve conter:
+  - Nome da cervejaria
+  - Lista formatada de produtos (categorias, IBU, ABV, preço)
+
+### 2. ➕ Botão de Adicionar Item ao Menu
+- [ ] Adicionar botão **"Adicionar novo item"** na página de Cardápio.
+- [ ] Redirecionar para formulário com campos: nome, descrição, categoria, ABV, IBU, preço, imagem.
+
+### 3. 🧾 Correções no Dashboard
+#### Card "Status"
+- [ ] Substituir `tables.overview` por **Visão Geral**
+- [ ] Substituir `tables.available` por **Mesa disponível**
+- [ ] Substituir `tables.manage` por **Gestão de mesas**
+
+#### Card "QR Codes das Mesas"
+- [ ] Substituir `common.viewAll` por **Visualizar Todos**
+
+---
+
+## 📊 Correções na Página `/reports`
+- [ ] Substituir `reports.totalSales` por **Total vendido**
+- [ ] Substituir `reports.totalOrders` por **Todos os Pedidos**
+- [ ] Substituir `reports.completedOrders` por **Pedidos Finalizados**
+- [ ] Substituir `reports.totalItemsSold` por **Total Itens Vendidos**
+- [ ] Substituir `reports.averageOrderValue` por **Valor médio do pedido**
+- [ ] Substituir `Sales Overview` por **Visão Geral de Vendas**
+- [ ] Substituir `reports.salesDescription` por **Descrição das vendas**
+- [ ] Substituir `reports.sales` por **Relatórios de vendas**
+
+---
+
+## ✅ Checklist Final
+- [ ] Botões de exportação em PDF funcionais
+- [ ] Inclusão do logotipo e identidade visual no PDF
+- [ ] Botão de adicionar novo item presente e funcional
+- [ ] Traduções corrigidas em todos os cards do Dashboard
+- [ ] Traduções corrigidas em todos os cards de `/reports`
+- [ ] Layout preservado e responsivo
+
+---
+
+## 🚀 Prompt para Replit (v5)
+
+```prompt
+Fix and finalize the BierServ brewery management system with the following updates:
+
+1. Make the 'Export Menu PDF' and 'Compact PDF' buttons functional. PDF must include logo, brewery name, product list with IBU, ABV, price, and categories.
+2. Add a visible and functional 'Add New Item' button on the Menu page that redirects to a product creation form.
+3. Correct the following labels in the Dashboard:
+   - 'tables.overview' → 'Visão Geral'
+   - 'tables.available' → 'Mesa disponível'
+   - 'tables.manage' → 'Gestão de mesas'
+   - 'common.viewAll' → 'Visualizar Todos'
+4. Fix all labels in the /reports page:
+   - 'reports.totalSales' → 'Total vendido'
+   - 'reports.totalOrders' → 'Todos os Pedidos'
+   - 'reports.completedOrders' → 'Pedidos Finalizados'
+   - 'reports.totalItemsSold' → 'Total Itens Vendidos'
+   - 'reports.averageOrderValue' → 'Valor médio do pedido'
+   - 'Sales Overview' → 'Visão Geral de Vendas'
+   - 'reports.salesDescription' → 'Descrição das vendas'
+   - 'reports.sales' → 'Relatórios de vendas'
+5. Maintain current design and styling while ensuring complete UI translation into Portuguese (Brazil).
+6. Review the project thoroughly for any broken or untranslated interface elements.
+
+Deploy this version as a stable, polished system ready for production on Replit.
+```
+
+---
+

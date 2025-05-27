@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for micro-interactions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.2s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  border-color: rgba(251, 191, 36, 0.5);
+}
+
+/* Button micro-interactions */
+.btn-interactive {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-interactive:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-interactive:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Card animations */
+.card-interactive {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Status indicators with pulse */
+.status-indicator {
+  position: relative;
+}
+
+.status-indicator.online::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse-soft 2s infinite;
+  z-index: -1;
+}
+
+:root {
+  --background: 48 100% 95%;  /* #FFFBEB - cream */
+  --foreground: 215 28% 17%;  /* #1E293B - stout */
+
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 17%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 28% 17%;
+
+  --primary: 35 92% 43%;  /* #D97706 - amber */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 162 95% 24%;  /* #047857 - hop */
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 48 10% 90%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 35 92% 50%;  /* #F59E0B - lager */
+  --accent-foreground: 215 28% 17%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 35 92% 43%;  /* amber */
+
+  --radius: 0.5rem;
+
+  /* Chart colors */
+  --chart-1: 35 92% 43%;  /* amber */
+  --chart-2: 162 95% 24%;  /* hop */
+  --chart-3: 35 92% 50%;  /* lager */
+  --chart-4: 35 79% 37%;  /* ipa */
+  --chart-5: 215 28% 17%;  /* stout */
+
+  /* Sidebar specific colors */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 215 28% 17%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-primary: 35 92% 43%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 48 10% 90%;
+  --sidebar-accent-foreground: 215 28% 17%;
+  --sidebar-ring: 35 92% 43%;
+}
+
+.dark {
+  --background: 24 38% 17%;  /* #3F2917 - richbrown */
+  --foreground: 0 0% 95%;
+
+  --card: 215 28% 17%;  /* #1E293B - stout */
+  --card-foreground: 0 0% 95%;
+
+  --popover: 215 28% 17%;
+  --popover-foreground: 0 0% 95%;
+
+  --primary: 35 92% 43%;  /* #D97706 - amber */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 162 95% 24%;  /* #047857 - hop */
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 215 25% 27%;
+  --muted-foreground: 214 15% 65%;
+
+  --accent: 35 92% 50%;  /* #F59E0B - lager */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 215 30% 22%;
+  --input: 215 30% 22%;
+  --ring: 35 92% 43%;  /* amber */
+
+  /* Chart colors - slightly adjusted for dark mode */
+  --chart-1: 35 92% 50%;  /* amber lighter */
+  --chart-2: 162 75% 40%;  /* hop lighter */
+  --chart-3: 35 92% 60%;  /* lager lighter */
+  --chart-4: 35 79% 47%;  /* ipa lighter */
+  --chart-5: 215 28% 40%;  /* stout lighter */
+
+  /* Sidebar specific colors */
+  --sidebar-background: 215 28% 17%;  /* stout */
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-border: 215 30% 22%;
+  --sidebar-primary: 35 92% 43%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 25% 27%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-ring: 35 92% 43%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-200;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-beer {
+    font-family: 'Bitter', serif;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  .break-words {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}

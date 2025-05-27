@@ -1,0 +1,122 @@
+from datetime import date
+
+# Atualiza o conteúdo do PRD com melhorias visuais e funcionais detalhadas
+prd_final = f"""\
+# 📘 Product Requirements Document (PRD) — BierServ
+**Versão:** 2.0  
+**Atualização:** {date.today().strftime('%d/%m/%Y')}  
+**Idioma Padrão:** Português (Brasil)  
+**Plataforma:** SaaS Web Responsivo
+
+---
+
+## 🎯 Objetivo
+Entregar uma solução 100% funcional e visualmente consistente para gerenciamento de cervejarias, com foco em experiência do cliente, controle operacional e padronização visual.
+
+---
+
+## 👥 Níveis de Acesso
+- **Administrador:** controle total.
+- **Gerente:** gestão de mesas, produtos e relatórios.
+- **Garçom:** gerenciamento de pedidos e atendimento.
+
+---
+
+## 🧩 Funcionalidades Principais
+
+### 🍺 Cardápio Digital
+- Categorias organizadas: cervejas, petiscos, pratos.
+- Exibição de IBU e ABV.
+- Upload de imagem para cada produto.
+- Sugestão de harmonização entre cerveja e prato.
+- Filtro por sabor (tipo, ABV, IBU).
+- Avaliação e comentários de clientes (com moderação).
+- Tradução automática (PT/EN/ES via i18next).
+- Pedido direto pelo celular via QR Code.
+- Design 100% responsivo e consistente.
+
+---
+
+## 📦 Gestão de Produtos
+- Cadastro de produtos com imagem (upload .jpg/.png).
+- Filtros de busca e sliders ABV/IBU funcionais.
+- Validação de campos obrigatórios e suporte multilíngue.
+
+---
+
+## 📐 Consistência Visual
+- Todos os **cards devem ter o mesmo layout e cor**, com base nos cards da página de Cardápio.
+- Criar componente `CardBierServ` reutilizável.
+- Corrigir textos que extrapolam a caixa (`overflow-wrap`, `line-clamp`).
+
+---
+
+## 🪑 Mesas
+- Exibir cartões padronizados por mesa (layout idêntico entre páginas).
+- Substituir texto do botão `"common.grid"` por `"Visualizar em Grade"`.
+- Adicionar **toggle para marcar mesa como Livre/Reservada/Ocupada**.
+- Vincular reserva ao histórico da mesa.
+- Gerar QR Code único por mesa.
+
+---
+
+## 🛎️ Pedidos
+- Corrigir página de "Pedidos" (atualmente vazia).
+- Listar pedidos ativos, com mesa, itens, status e valor total.
+- Ações por garçom: confirmar entrega, marcar como finalizado.
+
+---
+
+## 🔔 Notificações em Tempo Real
+- Usar `Socket.IO` para eventos:
+  - Novo pedido
+  - Pedido pronto
+  - Chamado de garçom
+  - Mudança de status da mesa
+
+---
+
+## 📊 Dashboards e Relatórios
+- Exibir total de vendas, faturamento, pedidos por produto e por horário.
+- Exportar relatórios para CSV/PDF.
+- Gráficos com `Chart.js` ou `Recharts`.
+
+---
+
+## 🔐 Segurança e Logs
+- Logs por usuário: login, alteração, exclusão, pedidos.
+- Sessões protegidas e expiradas por inatividade.
+
+---
+
+## ✅ Checklist de Verificação Final
+- [ ] Todos os textos traduzidos corretamente
+- [ ] Cards padronizados em todas as páginas
+- [ ] Página de pedidos funcional
+- [ ] Mesas com toggle de status
+- [ ] Upload de imagem no cadastro de produtos
+- [ ] Todos os botões com nomes claros
+- [ ] Sistema testado com usuários simulados
+- [ ] Nenhum componente com texto quebrado
+
+---
+
+## 🚀 Prompt para Replit (atualizado)
+
+```prompt
+Update the brewery management system with the following final refinements:
+
+1. All product cards and UI blocks must follow a consistent layout and color scheme (base it on the current menu page).
+2. Add image upload functionality (.jpg/.png) when adding a new product to the menu.
+3. Replace the placeholder button "common.grid" with the actual label "Visualizar em Grade".
+4. Fix the "Pedidos" dashboard page so it lists all active orders (table, items, total, status).
+5. Enable toggles on each table card to switch between states: Free, Reserved, Occupied.
+6. Make sure product cards properly display IBU and ABV and do not overflow text boundaries.
+7. Use Socket.IO for real-time notifications (orders, table status, waiter calls).
+8. Ensure dashboard charts show sales, most ordered products, table usage, and allow export to CSV.
+9. Use i18next for full translation into Portuguese, English, and Spanish.
+10. Default language must be Portuguese (Brazil).
+11. All elements must be responsive, clean, and fully functional on Replit.
+12. Verify the entire project for consistency, working links, correct labels, and no layout errors.
+
+Deploy everything on Replit with complete functionality and visual polish.
